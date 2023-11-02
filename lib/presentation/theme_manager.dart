@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:new_project_mvvm/presentation/color_manager.dart';
-import 'package:new_project_mvvm/presentation/font_manager.dart';
-import 'package:new_project_mvvm/presentation/styles_manager.dart';
-import 'package:new_project_mvvm/presentation/values_manager.dart';
+import 'package:new_project_mvvm/presentation/resources/color_manager.dart';
+import 'package:new_project_mvvm/presentation/resources/font_manager.dart';
+import 'package:new_project_mvvm/presentation/resources/styles_manager.dart';
+import 'package:new_project_mvvm/presentation/resources/values_manager.dart';
 
 ThemeData getApplicationTheme() {
   return ThemeData(
@@ -70,40 +70,26 @@ ThemeData getApplicationTheme() {
     /// input decoration theme (text form field)
     inputDecorationTheme: InputDecorationTheme(
       contentPadding: const EdgeInsets.all(AppPadding.p8),
-      labelStyle: getRegularStyle(
-        color: ColorManager.grey,
-        fontSize: FontSize.s14,
-      ),
-      hintStyle: getMediumStyle(
-        color: ColorManager.grey,
-        fontSize: AppSize.s14,
-      ),
-      errorStyle: getRegularStyle(
-        color: ColorManager.error,
-      ),
+      labelStyle:
+          getRegularStyle(color: ColorManager.grey, fontSize: FontSize.s14),
+      hintStyle:
+          getMediumStyle(color: ColorManager.grey, fontSize: AppSize.s14),
+      errorStyle: getRegularStyle(color: ColorManager.error),
       enabledBorder: OutlineInputBorder(
         borderSide: BorderSide(color: ColorManager.grey, width: AppSize.s1),
-        borderRadius: const BorderRadius.all(
-          Radius.circular(AppSize.s8),
-        ),
+        borderRadius: const BorderRadius.all(Radius.circular(AppSize.s8)),
       ),
       focusedBorder: OutlineInputBorder(
         borderSide: BorderSide(color: ColorManager.primary, width: AppSize.s1),
-        borderRadius: const BorderRadius.all(
-          Radius.circular(AppSize.s8),
-        ),
+        borderRadius: const BorderRadius.all(Radius.circular(AppSize.s8)),
       ),
       errorBorder: OutlineInputBorder(
         borderSide: BorderSide(color: ColorManager.error, width: AppSize.s1),
-        borderRadius: const BorderRadius.all(
-          Radius.circular(AppSize.s8),
-        ),
+        borderRadius: const BorderRadius.all(Radius.circular(AppSize.s8)),
       ),
       focusedErrorBorder: OutlineInputBorder(
         borderSide: BorderSide(color: ColorManager.primary, width: AppSize.s1),
-        borderRadius: const BorderRadius.all(
-          Radius.circular(AppSize.s8),
-        ),
+        borderRadius: const BorderRadius.all(Radius.circular(AppSize.s8)),
       ),
     ),
   );
