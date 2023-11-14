@@ -1,9 +1,10 @@
 import 'dart:async';
+import 'dart:core';
 
 import 'package:flutter/material.dart';
 import 'package:new_project_mvvm/presentation/resources/assets_manager.dart';
 import 'package:new_project_mvvm/presentation/resources/color_manager.dart';
-import 'package:new_project_mvvm/presentation/resources/routes_mananger.dart';
+import 'package:new_project_mvvm/presentation/resources/routes_manager.dart';
 
 import '../resources/constant_managre.dart';
 
@@ -18,7 +19,10 @@ class _SplashViewState extends State<SplashView> {
   Timer? _timer;
 
   _startDelay() {
-    _timer = Timer(const Duration(seconds: AppConstants.splashDelay), _goNext);
+    _timer = Timer(
+      const Duration(seconds: AppConstants.splashDelayTime),
+      _goNext,
+    );
   }
 
   _goNext() {
@@ -34,6 +38,7 @@ class _SplashViewState extends State<SplashView> {
   @override
   void dispose() {
     _timer?.cancel();
+
     super.dispose();
   }
 
@@ -41,8 +46,7 @@ class _SplashViewState extends State<SplashView> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorManager.primary,
-      body:
-          const Center(child: Image(image: AssetImage(ImageAssets.splashLogo))),
+      body: const Center(child: Image(image: AssetImage(ImageAssets.splashLogo))),
     );
   }
 }

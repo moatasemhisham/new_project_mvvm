@@ -26,10 +26,7 @@ ThemeData getApplicationTheme() {
       color: ColorManager.primary,
       elevation: AppSize.s4,
       shadowColor: ColorManager.lightPrimary,
-      titleTextStyle: getRegularStyle(
-        color: ColorManager.white,
-        fontSize: FontSize.s16,
-      ),
+      titleTextStyle: getRegularStyle(color: ColorManager.white, fontSize: FontSize.s16),
     ),
 
     /// button theme
@@ -57,20 +54,19 @@ ThemeData getApplicationTheme() {
 
     /// text theme
     textTheme: TextTheme(
-      displayLarge: getLightStyle(color: ColorManager.white, fontSize: FontSize.s22),
-      headline1: getSemiBoldStyle(color: ColorManager.darkGrey, fontSize: FontSize.s14),
-      subtitle1: getMediumStyle(color: ColorManager.lightGrey, fontSize: FontSize.s14),
-      caption: getRegularStyle(color: ColorManager.grey1),
-      bodyText1: getRegularStyle(color: ColorManager.grey),
+      displayLarge: getSemiBoldStyle(color: ColorManager.darkGrey, fontSize: FontSize.s16),
+      headlineLarge: getSemiBoldStyle(color: ColorManager.darkGrey, fontSize: FontSize.s16),
+      headlineMedium: getSemiBoldStyle(color: ColorManager.darkGrey, fontSize: FontSize.s14),
+      titleMedium: getMediumStyle(color: ColorManager.lightGrey, fontSize: FontSize.s14),
+      bodyLarge: getRegularStyle(color: ColorManager.grey1),
+      bodySmall: getRegularStyle(color: ColorManager.grey),
     ),
 
     /// input decoration theme (text form field)
     inputDecorationTheme: InputDecorationTheme(
       contentPadding: const EdgeInsets.all(AppPadding.p8),
-      labelStyle:
-          getRegularStyle(color: ColorManager.grey, fontSize: FontSize.s14),
-      hintStyle:
-          getMediumStyle(color: ColorManager.grey, fontSize: AppSize.s14),
+      labelStyle: getRegularStyle(color: ColorManager.grey, fontSize: FontSize.s14),
+      hintStyle: getMediumStyle(color: ColorManager.grey, fontSize: AppSize.s14),
       errorStyle: getRegularStyle(color: ColorManager.error),
       enabledBorder: OutlineInputBorder(
         borderSide: BorderSide(color: ColorManager.grey, width: AppSize.s1),

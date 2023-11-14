@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:new_project_mvvm/presentation/resources/routes_mananger.dart';
+import 'package:new_project_mvvm/presentation/resources/routes_manager.dart';
 import 'package:new_project_mvvm/presentation/resources/theme_manager.dart';
 
 class MyApp extends StatefulWidget {
